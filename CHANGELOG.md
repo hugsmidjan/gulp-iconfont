@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+
+## 0.1.2
+
+_2019-06-21_
+
 - fix: `formats` option wasn't being applied
 
 ## 0.1.1
