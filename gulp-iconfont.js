@@ -32,7 +32,7 @@ module.exports = (opts) => {
       .pipe(
         iconfont({
           fontName: opts.fontName,
-          formats: opts.format,
+          formats: opts.formats,
           normalize: true,
           fontHeight: 1000,
           timestamp: 1,
