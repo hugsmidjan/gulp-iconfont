@@ -4,6 +4,8 @@
 
 - ... <!-- Add new lines here. Version number will be decided later -->
 
+- feat: drop `ttf` from defaults
+
 ## 0.1.2
 
 _2019-06-21_

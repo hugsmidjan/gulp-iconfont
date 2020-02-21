@@ -12,7 +12,7 @@ const defaultOpts = {
   dist: 'pub/i/',
   glob: 'iconfont/*.svg', // which files to use as entry points
   fontName: 'icons',
-  formats: ['woff2', 'woff', 'ttf'],
+  formats: ['woff2', 'woff'],
   // scssFile: '', // `options.src`-relative path + filename
   // lessFile: '', // `options.src`-relative path + filename
   // onGlyphs: null, // (glyphs:{ name: string, unicode: string[]}, options: object) => void
