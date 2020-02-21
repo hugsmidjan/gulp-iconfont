@@ -4,6 +4,10 @@
 
 - ... <!-- Add new lines here. Version number will be decided later -->
 
+## 0.2.0
+
+_2020-02-21_
+
 - feat: drop `ttf` from defaults
 
 ## 0.1.2
