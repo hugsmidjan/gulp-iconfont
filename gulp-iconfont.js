@@ -52,12 +52,11 @@ module.exports = (opts) => {
           )
         );
         if (opts.scssFile) {
-          const iconVars = glyphs.map((cp) => '(' + cp.name + ', ' + cp.unicode[0] + ')');
-          makeDir(opts.scssFile, true);
-          fs.writeFileSync(
-            opts.src + opts.scssFile,
-            warningMsg + '$' + opts.fontName + ':\n    ' + iconVars.join(',\n    ') + ';'
+          const iconVars = glyphs.map(
+            (cp) => '$' + cp.name + ': "' + cp.unicode[0] + '";'
           );
+          makeDir(opts.scssFile, true);
+          fs.writeFileSync(opts.src + opts.scssFile, warningMsg + iconVars.join('\n'));
         }
         if (opts.lessFile) {
           const iconVars = glyphs.map(

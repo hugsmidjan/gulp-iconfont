@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+- **BREAKING** feat: `scssFile` now defines simple `${svg-name}` variables
 
 ## 0.2.0
 
