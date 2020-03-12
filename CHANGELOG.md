@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+
+## 0.3.1
+
+_2020-03-12_
+
 - fix: Make `scssFile` and `lessFile` folders inside `src` folder
 
 ## 0.3.0
