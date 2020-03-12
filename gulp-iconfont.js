@@ -55,14 +55,14 @@ module.exports = (opts) => {
           const iconVars = glyphs.map(
             (cp) => '$' + cp.name + ': "' + cp.unicode[0] + '";'
           );
-          makeDir(opts.scssFile, true);
+          makeDir(opts.src + opts.scssFile, true);
           fs.writeFileSync(opts.src + opts.scssFile, warningMsg + iconVars.join('\n'));
         }
         if (opts.lessFile) {
           const iconVars = glyphs.map(
             (cp) => '@' + opts.fontName + '-' + cp.name + ': ' + cp.unicode[0] + ';'
           );
-          makeDir(opts.lessFile, true);
+          makeDir(opts.src + opts.lessFile, true);
           fs.writeFileSync(opts.src + opts.lessFile, warningMsg + iconVars.join('\n'));
         }
         if (opts.onGlyps) {

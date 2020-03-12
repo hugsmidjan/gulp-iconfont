@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+- fix: Make `scssFile` and `lessFile` folders inside `src` folder
 
 ## 0.3.0
 
