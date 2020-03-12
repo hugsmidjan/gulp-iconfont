@@ -3,12 +3,12 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
-- feat: Prefix sass variables with `fontName+'-'` unless `varPrefix` is set
 
-## 0.3.1
+## 0.3.1 – 0.3.2
 
 _2020-03-12_
 
+- feat: Prefix sass variables with `fontName+'-'` unless `varPrefix` is set
 - fix: Make `scssFile` and `lessFile` folders inside `src` folder
 
 ## 0.3.0
