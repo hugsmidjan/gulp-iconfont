@@ -15,6 +15,7 @@ const defaultOpts = {
   formats: ['woff2', 'woff'],
   // scssFile: '', // `options.src`-relative path + filename
   // lessFile: '', // `options.src`-relative path + filename
+  // varPrefix: fontName + '-', // Custom prefix for less/css variables.
   // onGlyphs: null, // (glyphs:{ name: string, unicode: string[]}, options: object) => void
 };
 
@@ -51,16 +52,17 @@ module.exports = (opts) => {
             '\t'
           )
         );
+        const varPrefix = opts.varPrefix || opts.fontName + '-';
         if (opts.scssFile) {
           const iconVars = glyphs.map(
-            (cp) => '$' + cp.name + ': "' + cp.unicode[0] + '";'
+            (cp) => '$' + varPrefix + cp.name + ': "' + cp.unicode[0] + '";'
           );
           makeDir(opts.src + opts.scssFile, true);
           fs.writeFileSync(opts.src + opts.scssFile, warningMsg + iconVars.join('\n'));
         }
         if (opts.lessFile) {
           const iconVars = glyphs.map(
-            (cp) => '@' + opts.fontName + '-' + cp.name + ': ' + cp.unicode[0] + ';'
+            (cp) => '@' + varPrefix + cp.name + ': ' + cp.unicode[0] + ';'
           );
           makeDir(opts.src + opts.lessFile, true);
           fs.writeFileSync(opts.src + opts.lessFile, warningMsg + iconVars.join('\n'));

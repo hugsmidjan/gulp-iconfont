@@ -24,6 +24,7 @@ const options = {
   fontName: 'icons',
   // scssFile: '', // `options.src`-relative path, including filename
   // lessFile: '', // `options.src`-relative path, including filename
+  // varPrefix: fontName + '-', // Custom prefix for less/css variables.
   // onGlyphs: null, // (glyphs:{ name: string, unicode: string[]}, options: object) => void
 };
 

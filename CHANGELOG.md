@@ -3,6 +3,7 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+- feat: Prefix sass variables with `fontName+'-'` unless `varPrefix` is set
 
 ## 0.3.1
 
