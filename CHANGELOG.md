@@ -3,6 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+- feat: Upgrade `gulp-iconfont` dependency to gain support for node@14
+- feat: Set `pkg.engines.node` to `>=12`
 
 ## 0.3.1 – 0.3.2
 
