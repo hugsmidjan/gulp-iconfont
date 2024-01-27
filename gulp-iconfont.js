@@ -27,8 +27,8 @@ const warningMsg = '// This file is auto-generated. DO NOT EDIT! \n\n';
 module.exports = (opts) => {
   opts = normalizeOpts(opts, defaultOpts);
 
-  const bundleTask = () => {
-    return src(prefixGlobs(opts.glob, opts.src), { base: opts.src })
+  const bundleTask = () => new Promise((resolve, reject) => {
+    src(prefixGlobs(opts.glob, opts.src), { base: opts.src })
       .pipe(notifyPipeError())
       .pipe(
         iconfont({
@@ -71,13 +71,15 @@ module.exports = (opts) => {
           opts.onGlyps(glyphs, options);
         }
       })
-      .pipe(dest(opts.dist));
-  };
+      .pipe(dest(opts.dist))
+      .on('end', resolve)
+      .on('error', reject);
+    });
+
   bundleTask.displayName = opts.name;
 
-  const watchTask = () => {
-    watch(prefixGlobs(opts.glob, opts.src), bundleTask);
-  };
+  const watchTask = () => watch(prefixGlobs(opts.glob, opts.src), bundleTask);
+
   watchTask.displayName = opts.name + '_watch';
 
   const ret = [bundleTask, watchTask];
