@@ -3,6 +3,11 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+
+## 0.4.1
+
+_2024-01-27_
+
 - feat: Make iconfont task function return a `Promise`
 - feat: Make watch task return a node `FSWatcher` object
 
