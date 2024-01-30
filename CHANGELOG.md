@@ -3,6 +3,8 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+- fix: Accept the `onGlyphs` option, but still silently support the typo `onGlyps`
+
 ## 0.4.2
 
 _2024-01-30_

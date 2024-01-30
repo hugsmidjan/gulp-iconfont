@@ -67,8 +67,10 @@ module.exports = (opts) => {
           makeDir(opts.src + opts.lessFile, true);
           fs.writeFileSync(opts.src + opts.lessFile, warningMsg + iconVars.join('\n'));
         }
-        if (opts.onGlyps) {
-          opts.onGlyps(glyphs, options);
+        // Provide back-compat support with the old, incorrectly spelled `onGlyps` option
+        const onGlyphs = opts.onGlyphs || opts.onGlyps;
+        if (onGlyphs) {
+          onGlyphs(glyphs, options);
         }
       })
       .pipe(dest(opts.dist))
