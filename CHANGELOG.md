@@ -3,13 +3,13 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
-- fix: Accept the `onGlyphs` option, but still silently support the typo `onGlyps`
 
-## 0.4.2
+## 0.4.2 – 0.4.3
 
 _2024-01-30_
 
 - feat: Add TypeScript types and JSDoc comments
+- fix: Accept the `onGlyphs` option, but still silently support the typo `onGlyps`
 
 ## 0.4.1
 
