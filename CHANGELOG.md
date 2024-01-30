@@ -3,6 +3,10 @@
 ## Upcoming...
 
 - ... <!-- Add new lines here. Version number will be decided later -->
+## 0.4.2
+
+_2024-01-30_
+
 - feat: Add TypeScript types and JSDoc comments
 
 ## 0.4.1
